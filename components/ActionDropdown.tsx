@@ -35,7 +35,10 @@ const ActionDropdown = ({ file }: { file: Models.Document }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [action, setAction] = useState<ActionType | null>(null);
-  const [name, setName] = useState(file.name);
+  // const [name, setName] = useState(file.name);
+  const [name, setName] = useState(
+    file.name.replace(new RegExp(`\\.${file.extension}$`), ""),
+  );
   const [isLoading, setIsLoading] = useState(false);
   const [emails, setEmails] = useState<string[]>([]);
 
@@ -85,6 +88,7 @@ const ActionDropdown = ({ file }: { file: Models.Document }) => {
     if (!action) return null;
 
     const { value, label } = action;
+    console.log(name);
 
     return (
       <DialogContent

@@ -32,8 +32,7 @@ const Search = () => {
       setOpen(true);
     };
 
-    fetchFiles();npx shadcn@latest add select
-
+    fetchFiles();
   }, [debouncedQuery]);
 
   // Update the query state when the searchQuery changes
