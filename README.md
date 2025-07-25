@@ -15,7 +15,7 @@
 <h3 align="center">Storage and File Sharing Platform</h3>
 
    <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
+     This project was inspired by the amazing tutorials from <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>. Check out their channel for more in-depth guides and join the JSM community!
     </div>
 </div>
 
@@ -25,22 +25,12 @@
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
-5. 🔗 [Assets](#links)
-6. 🚀 [More](#more)
-
-## 🚨 Tutorial
-
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube
-channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
-
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects
-like these step-by-step in a beginner-friendly manner!
-
-<a href="https://youtu.be/lie0cr3wESQ?si=yLQyhMrYLjpysnqE" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
 
 ## <a name="introduction">🤖 Introduction</a>
 
-A storage management and file sharing platform that lets users effortlessly upload, organize, and share files. Built with the latest Next.js 15 and the Appwrite Node SDK, utilizing advanced features for seamless file management.
+This project is a modern storage management and file sharing platform designed to make handling your digital files simple and efficient. With this application, users can securely upload, organize, and share files of various types—including documents, images, videos, and audio—directly from their browser. The platform features robust user authentication, intuitive file management tools, and seamless sharing capabilities, all built on top of Next.js 15 and Appwrite for a fast and scalable experience.
+
+Key highlights include a dynamic dashboard for tracking storage usage, advanced search and sorting options, and a responsive, user-friendly interface. Whether you need to keep your files organized, collaborate with others, or access your data from anywhere, this platform provides a comprehensive solution for personal and professional file management needs.
 
 If you're getting started and need assistance or face any bugs, join our active Discord community with over **34k+**
 members. It's a place where people help each other out.
@@ -131,22 +121,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-## <a name="links">🔗 Assets</a>
 
-- Assets used in the project can be found [here](https://jsm.dev/gdrive-kit)
+---
 
-<a href="https://jsm.dev/gdrive-kit">
-  <img src="public/readme/videokit.png" alt="Video Kit Banner">
-</a>
-
-
-## <a name="more">🚀 More</a>
-
-**Advance your skills with Next.js Pro Course**
-
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure. They're packed with
-detailed explanations, cool features, and exercises to boost your skills. Give it a go!
-
-<a href="https://jsm.dev/gdrive-jsmpro" target="_blank">
-  <img src="public/readme/jsmpro.png" alt="Project Banner">
-</a>
+<sub>Credit: Project structure and learning approach inspired by <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank">JavaScript Mastery</a>.</sub>
