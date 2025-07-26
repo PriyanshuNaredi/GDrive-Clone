@@ -7,36 +7,7 @@
           <value>
             <PendingDiffInfo>
               <option name="filePath" value="$PROJECT_DIR$/app/(auth)/layout.md" />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/app/(auth)/sign-in/page.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/app/(auth)/sign-in/page.md" />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/app/(auth)/sign-up/page.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/app/(auth)/sign-up/page.md" />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/app/(root)/[type]/page.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/app/(root)/[type]/page.md" />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/app/(root)/layout.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/app/(root)/layout.md" />
-              <option name="originalContent" value="&#10;" />
-              <option name="updatedContent" value="# layout.tsx&#10;&#10;## Purpose&#10;Defines the main layout for authenticated pages, including sidebar, header, mobile navigation, and notification toaster. Checks if a user is logged in and redirects to the sign-in page if not.&#10;&#10;## Hooks Used&#10;- **None (async server component)**: Uses async/await for user authentication check.&#10;&#10;## Functions&#10;- **Layout**: Main layout component that renders sidebar, header, mobile navigation, and children content. Redirects to sign-in if user is not authenticated.&#10;- **getCurrentUser** (imported): Fetches the current user for authentication.&#10;- **redirect** (imported): Redirects to the sign-in page if not authenticated.&#10;&#10;## Important Imports&#10;- `Sidebar`, `MobileNavigation`, `Header`: UI components for navigation and user info.&#10;- `Toaster`: Notification component for toast messages.&#10;&#10;## Usage&#10;Used as the main layout for authenticated pages, ensuring navigation, user info, and notifications are consistently available." />
+              <option name="updatedContent" value="# (auth)/layout.md&#10;&#10;This file is a placeholder for documentation or description of the authentication layout in the application. You can use this file to describe the structure, purpose, and any special behaviors of the authentication layout (such as shared UI, context providers, or route protection for sign-in and sign-up pages).&#10;&#10;---&#10;&#10;## Example Content&#10;- Overview of the authentication layout&#10;- Shared components or providers used&#10;- How authentication state is managed&#10;- Any custom hooks or utilities used in this layout&#10;" />
             </PendingDiffInfo>
           </value>
         </entry>
@@ -44,15 +15,7 @@
           <value>
             <PendingDiffInfo>
               <option name="filePath" value="$PROJECT_DIR$/app/(root)/page.md" />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/app/layout.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/app/layout.md" />
-              <option name="originalContent" value="&#10;" />
-              <option name="updatedContent" value="# layout.tsx&#10;&#10;## Purpose&#10;Sets up the global layout for the Next.js application, including font configuration, metadata, and global styles. Wraps all pages in a consistent HTML structure.&#10;&#10;## Hooks Used&#10;- **None**: This file is a stateless layout component.&#10;&#10;## Functions&#10;- **RootLayout**: Main layout component that wraps all children in the HTML and body tags, applies font and global styles.&#10;&#10;## Important Imports&#10;- `Poppins` from next/font/google: Loads and configures the Poppins font.&#10;- `localFont` from next/font/local: For custom local fonts.&#10;- `Metadata` from next: Sets up page metadata.&#10;- `globals.css`: Global CSS styles.&#10;&#10;## Usage&#10;Used as the root layout for all pages in the Next.js app, ensuring consistent styling and metadata." />
+              <option name="updatedContent" value="# (root)/page.tsx&#10;&#10;This file is the main dashboard page for the root route of the application. It is a React Server Component that displays the user's storage usage, file type summaries, and a list of recently uploaded files.&#10;&#10;## Main Features&#10;- **Chart**: Uses the `Chart` component to visualize the percentage of storage used.&#10;- **File Type Summaries**: Shows a summary card for each file type (image, document, video, audio, other) with the total size and latest upload date.&#10;- **Recent Files**: Lists the most recently uploaded files with their details and actions.&#10;&#10;## Hooks and Functions Used&#10;- **getFiles**: Fetches the latest files for the user.&#10;- **getTotalSize**: Retrieves the total storage used and breakdown by file type.&#10;- **convertFileSize**: Converts file sizes to a human-readable format.&#10;- **getUsageSummary**: Processes the total space data into a summary for display.&#10;&#10;## Components Used&#10;- **Chart**: Displays a radial bar chart of storage usage.&#10;- **FormattedDateTime**: Formats and displays dates.&#10;- **Thumbnail**: Shows a preview or icon for each file.&#10;- **ActionDropdown**: Provides actions (rename, delete, share) for each file.&#10;- **Separator**: UI separator for summary cards.&#10;&#10;## Data Flow&#10;1. Fetches files and storage usage in parallel.&#10;2. Renders the storage chart and file type summaries.&#10;3. Displays a list of recent files with actions.&#10;&#10;---&#10;&#10;# (root)/page.md&#10;&#10;This file is a placeholder for the documentation or description of the root dashboard page. You can add details about the dashboard's purpose, features, and usage here.&#10;" />
             </PendingDiffInfo>
           </value>
         </entry>
@@ -60,15 +23,7 @@
           <value>
             <PendingDiffInfo>
               <option name="filePath" value="$PROJECT_DIR$/components/ActionDropdown.md" />
-              <option name="updatedContent" value="# ActionDropdown.tsx&#10;&#10;## Purpose&#10;Provides a dropdown menu for file actions (rename, delete, share, download) and manages related modals for user interaction.&#10;&#10;## Hooks Used&#10;- **useState**: Manages modal open/close state, dropdown state, selected action, file name, loading state, and email list for sharing.&#10;- **usePathname**: Gets the current route for context when performing actions.&#10;&#10;## Functions&#10;- **closeAllModals**: Closes all modals and resets the selected action.&#10;- **deleteFile, renameFile, updateFileUsers** (imported): Perform file operations (delete, rename, share) via backend actions.&#10;- **constructDownloadUrl** (imported): Constructs the download URL for a file.&#10;&#10;## Important Imports&#10;- UI components: `Dialog`, `DropdownMenu`, `Input`, `Button` for modal and dropdown UI.&#10;- `FileDetails`, `ShareInput`: Modal content components for file details and sharing.&#10;- `actionsDropdownItems`: List of available actions for the dropdown.&#10;&#10;## Props&#10;- `file`: The file object containing metadata and used for all actions.&#10;&#10;## Usage&#10;Used in file cards to provide quick access to file actions and manage user interactions for file operations." />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/components/ActionsModalContents.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/components/ActionsModalContents.md" />
-              <option name="updatedContent" value="# ActionsModalContents.tsx&#10;&#10;## Purpose&#10;Provides modal content components for displaying file details and sharing files with other users.&#10;&#10;## Hooks Used&#10;- **None**: This file only contains stateless components.&#10;&#10;## Functions&#10;- **ImageThumbnail**: Renders a file's thumbnail, name, and creation date.&#10;- **DetailRow**: Displays a label-value pair for file metadata.&#10;- **FileDetails**: Shows detailed information about a file (format, size, owner, last edit).&#10;- **ShareInput**: Allows input of email addresses to share the file with other users.&#10;&#10;## Important Imports&#10;- `Thumbnail`, `FormattedDateTime`: Components for file preview and date formatting.&#10;- `convertFileSize`, `formatDateTime`: Utility functions for formatting file size and date.&#10;- `Input`, `Button`: UI components for user input and actions.&#10;&#10;## Props&#10;- `file`: The file object containing metadata.&#10;- `onInputChange`, `onRemove` (ShareInput): Functions to manage email input and removal.&#10;&#10;## Usage&#10;Used in modals for file actions (details, sharing) triggered from file cards or dropdowns." />
+              <option name="updatedContent" value="# ActionDropdown.tsx&#10;&#10;This file contains the `ActionDropdown` component, which provides a dropdown menu for file actions such as renaming, deleting, and sharing files. It is used in the file list and recent files sections to allow users to manage their files directly from the UI.&#10;&#10;## Main Features&#10;- **Dropdown Menu**: Displays a menu with actions (rename, delete, share) for each file.&#10;- **Action Handlers**: Integrates with file actions (from `file.action.ts`) to perform operations like renaming or deleting files.&#10;- **Modal Integration**: Opens modals for actions that require user input (e.g., renaming a file or sharing with users).&#10;- **UI Feedback**: Provides feedback to the user after actions are performed (e.g., success or error messages).&#10;&#10;## Props&#10;- `file` (Models.Document): The file object for which actions are available.&#10;&#10;## Hooks and Functions Used&#10;- **useToast**: Displays toast notifications for action results.&#10;- **useState, useCallback**: Manages modal state and action handlers.&#10;&#10;## Usage&#10;Used in file lists and recent files to provide quick access to file management actions.&#10;&#10;---&#10;&#10;# ActionsModalContents.tsx&#10;&#10;This file contains the `ActionsModalContents` component, which renders the contents of modals for file actions such as renaming or sharing a file. It is used within modals triggered by the `ActionDropdown` component.&#10;&#10;## Main Features&#10;- **Dynamic Content**: Renders different forms or content based on the action (rename, share, etc.).&#10;- **Form Handling**: Handles form submission for renaming or sharing files.&#10;- **Validation**: Validates user input before performing actions.&#10;&#10;## Props&#10;- `action` (string): The action type (e.g., 'rename', 'share').&#10;- `file` (Models.Document): The file being acted upon.&#10;- `onClose` (function): Callback to close the modal.&#10;&#10;## Hooks and Functions Used&#10;- **useState, useCallback**: Manages form state and submission.&#10;- **File Actions**: Calls functions from `file.action.ts` to perform the requested action.&#10;&#10;## Usage&#10;Used inside modals opened from the `ActionDropdown` for file management actions.&#10;" />
             </PendingDiffInfo>
           </value>
         </entry>
@@ -76,23 +31,15 @@
           <value>
             <PendingDiffInfo>
               <option name="filePath" value="$PROJECT_DIR$/components/AuthForm.md" />
-              <option name="updatedContent" value="# AuthForm.tsx&#10;&#10;## Purpose&#10;Renders the authentication form for both sign-in and sign-up, handling form validation, submission, and OTP modal display.&#10;&#10;## Hooks Used&#10;- **useState**: Manages loading state, error messages, and account ID.&#10;- **useForm** (from react-hook-form): Handles form state, validation, and submission.&#10;&#10;## Functions&#10;- **authFormSchema**: Returns a Zod schema for form validation based on form type.&#10;- **createAccount, signInUser** (imported): Handle user registration and login.&#10;&#10;## Important Imports&#10;- `Button`, `Form`, `Input`: UI components for form controls.&#10;- `OtpModal`: Displays OTP modal for verification.&#10;- `zod`, `zodResolver`: Used for schema-based validation.&#10;&#10;## Props&#10;- `type`: Specifies whether the form is for sign-in or sign-up.&#10;&#10;## Usage&#10;Used in authentication pages to allow users to sign up or sign in, with validation and OTP verification." />
+              <option name="updatedContent" value="# AuthForm.tsx&#10;&#10;This file contains the `AuthForm` component, which provides the user interface and logic for authentication forms such as sign-in and sign-up. It is used on authentication pages to handle user credentials and authentication flows.&#10;&#10;## Main Features&#10;- **Form Fields**: Renders input fields for email, password, and other required authentication data.&#10;- **Validation**: Validates user input before submission.&#10;- **Submission Handling**: Handles form submission and calls authentication actions.&#10;- **Error Handling**: Displays error messages for invalid credentials or failed authentication.&#10;- **Loading State**: Shows loading indicators during authentication requests.&#10;&#10;## Props&#10;- `type` (string): Specifies the form type (e.g., 'sign-in', 'sign-up').&#10;&#10;## Hooks and Functions Used&#10;- **useState, useCallback**: Manages form state and submission logic.&#10;- **Authentication Actions**: Calls functions from user actions to authenticate users.&#10;&#10;## Usage&#10;Used on sign-in and sign-up pages to provide authentication functionality.&#10;&#10;---&#10;&#10;# Card.tsx&#10;&#10;This file contains the `Card` component, a reusable UI component for displaying content within a styled card layout. It is used throughout the application for grouping related content, such as file summaries, charts, and forms.&#10;&#10;## Main Features&#10;- **Card Layout**: Provides a consistent card UI with optional header, content, and footer sections.&#10;- **Customizable**: Accepts children and optional props for flexible content rendering.&#10;- **Styling**: Uses Tailwind CSS or custom styles for appearance.&#10;&#10;## Props&#10;- `children` (ReactNode): The content to display inside the card.&#10;- `className` (string, optional): Additional CSS classes for custom styling.&#10;&#10;## Usage&#10;Used to wrap content in a visually distinct card, such as on the dashboard or in modals.&#10;" />
             </PendingDiffInfo>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/components/Card.md">
+        <entry key="$PROJECT_DIR$/components/Chart.md">
           <value>
             <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/components/Card.md" />
-              <option name="updatedContent" value="# Card.tsx&#10;&#10;## Purpose&#10;Displays a file's details in a card format, including thumbnail, name, size, owner, and actions. Each card links to the file's URL and provides quick access to file actions.&#10;&#10;## Hooks Used&#10;- **None**: This component is stateless and does not use any React hooks.&#10;&#10;## Functions&#10;- **Card (component)**: Accepts a `file` object and renders its details, including thumbnail, name, size, creation date, owner, and an action dropdown for file operations.&#10;&#10;## Important Imports&#10;- `Thumbnail`: Displays the file's thumbnail or icon.&#10;- `ActionDropdown`: Provides file actions (rename, delete, share, download).&#10;- `FormattedDateTime`: Formats and displays the file's creation date.&#10;- `convertFileSize` from utils: Converts file size to a readable format.&#10;- `Link` from next/link: Makes the card clickable and links to the file URL.&#10;&#10;## Props&#10;- `file`: The file object containing metadata such as name, type, extension, size, owner, and URL.&#10;&#10;## Usage&#10;Used in file listing pages to visually represent each file and provide quick access to file actions." />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/components/FileUploader.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/components/FileUploader.md" />
-              <option name="updatedContent" value="# FileUploader.tsx&#10;&#10;## Purpose&#10;Provides a drag-and-drop interface for uploading files. Handles file size validation, triggers uploads, and displays notifications.&#10;&#10;## Hooks Used&#10;- **useState**: Manages the list of files being uploaded.&#10;- **useCallback**: Memoizes the file drop handler for performance.&#10;- **useDropzone**: Handles drag-and-drop file selection and triggers `onDrop`.&#10;- **useToast**: Custom hook for showing toast notifications when upload fails or succeeds.&#10;- **usePathname**: Gets the current route for upload context.&#10;&#10;## Functions&#10;- **onDrop**: Handles dropped files, validates size, triggers upload, and shows notifications.&#10;- **uploadFile** (imported): Uploads files to the backend.&#10;&#10;## Important Imports&#10;- `MAX_FILE_SIZE` from constants: Used for file size validation.&#10;- `Thumbnail`, `Button`: UI components for file preview and upload button.&#10;- `convertFileToUrl`, `getFileType`, `cn`: Utility functions for file handling and styling.&#10;&#10;## Props&#10;- `ownerId`: ID of the file owner.&#10;- `accountId`: Account ID for upload context.&#10;- `className`: Optional CSS class for styling.&#10;&#10;## Usage&#10;Used in the header and navigation to allow users to upload files to their drive." />
+              <option name="filePath" value="$PROJECT_DIR$/components/Chart.md" />
+              <option name="updatedContent" value="# Chart.tsx&#10;&#10;This file contains the `Chart` component, a client-side React component for visualizing storage usage in a radial bar chart format. It is used to display the percentage of storage used by the user in a visually appealing way.&#10;&#10;## Main Features&#10;- **RadialBarChart**: Uses the `recharts` library to render a radial bar chart showing the percentage of storage used.&#10;- **Dynamic Label**: Displays the percentage of space used and a label inside the chart.&#10;- **Card Layout**: Wraps the chart in a styled card with a header showing the available storage in a human-readable format.&#10;&#10;## Hooks and Functions Used&#10;- **calculatePercentage**: Calculates the percentage of storage used based on the input value.&#10;- **convertFileSize**: Converts the used storage value to a human-readable string (e.g., MB, GB).&#10;&#10;## Components Used&#10;- **Card, CardContent, CardHeader, CardTitle, CardDescription**: UI components for layout and styling.&#10;- **ChartContainer**: Provides configuration and layout for the chart.&#10;&#10;## Props&#10;- `used` (number): The amount of storage used (in bytes).&#10;&#10;## Usage&#10;This component is typically used on the dashboard page to give users a quick overview of their storage consumption.&#10;&#10;---&#10;&#10;# file.action.ts&#10;&#10;This file contains server-side actions for managing files in the application, including uploading, renaming, sharing, deleting, and retrieving files, as well as calculating total storage usage.&#10;&#10;## Main Functions&#10;- **uploadFile**: Handles file upload to Appwrite storage and creates a corresponding document in the database.&#10;- **renameFile**: Renames a file document in the database.&#10;- **updateFileUsers**: Updates the list of users who have access to a file (for sharing functionality).&#10;- **deleteFile**: Deletes a file document and the associated file from storage.&#10;- **getFiles**: Retrieves files for the current user, with support for filtering, searching, sorting, and limiting results.&#10;- **getTotalSize**: Calculates the total storage used by the user, broken down by file type, and returns usage statistics.&#10;&#10;## Helper Functions&#10;- **handelError**: Logs and throws errors with a custom message.&#10;- **createQueries**: Constructs Appwrite database queries based on user, file types, search text, sort order, and limit.&#10;&#10;## Hooks and Utilities Used&#10;- **createAdminClient**: Initializes Appwrite client for server-side operations.&#10;- **getCurrentUser**: Retrieves the currently authenticated user.&#10;- **constructFileUrl, getFileType, parseStringify**: Utility functions for file metadata and formatting.&#10;- **revalidatePath**: Triggers Next.js cache revalidation for a given path after mutations.&#10;&#10;## Usage&#10;These actions are used throughout the application for file management features, including uploading, renaming, sharing, deleting, and displaying files and storage statistics.&#10;&#10;## Error Handling&#10;All actions use `handelError` to log and throw errors, ensuring consistent error reporting and handling.&#10;" />
             </PendingDiffInfo>
           </value>
         </entry>
@@ -117,87 +64,6 @@
             <PendingDiffInfo>
               <option name="filePath" value="$PROJECT_DIR$/components/MobileNavigation.md" />
               <option name="updatedContent" value="# MobileNavigation.tsx&#10;&#10;## Purpose&#10;Provides a mobile-friendly navigation header, including user info, navigation links, file upload, and logout actions.&#10;&#10;## Hooks Used&#10;- **useState**: Manages the open/close state of the navigation sheet.&#10;- **usePathname**: Gets the current route for navigation context.&#10;&#10;## Functions&#10;- **MobileNavigation (component)**: Accepts user props and renders navigation, file upload, and logout functionality.&#10;- **signOutUser** (imported): Handles user sign-out when the button is clicked.&#10;&#10;## Important Imports&#10;- `Sheet`, `SheetContent`, `SheetTrigger`, `SheetTitle`: UI components for mobile navigation drawer.&#10;- `FileUploader`: Component for uploading files.&#10;- `Button`: UI button for logout.&#10;- `Image`: Displays logo and icons.&#10;- `navItems`: List of navigation items.&#10;&#10;## Props&#10;- `$id`: User's unique ID.&#10;- `accountId`: User's account ID.&#10;- `fullName`: User's full name.&#10;- `avatar`: User's avatar URL.&#10;- `email`: User's email address.&#10;&#10;## Usage&#10;Used in the main layout for mobile devices to provide navigation, file upload, and logout actions for authenticated users." />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/components/OTPModal.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/components/OTPModal.md" />
-              <option name="updatedContent" value="# OTPModal.tsx&#10;&#10;## Purpose&#10;Displays a modal for OTP (One-Time Password) verification during authentication, allowing users to enter and verify the OTP sent to their email.&#10;&#10;## Hooks Used&#10;- **useState**: Manages modal open state, OTP input, loading state.&#10;- **useRouter**: Navigates the user after successful OTP verification.&#10;&#10;## Functions&#10;- **handelSubmit**: Handles OTP submission and verification, navigates on success.&#10;- **handelResendOTP**: Handles resending the OTP to the user's email.&#10;- **sendEmailOTP, verifySecret** (imported): Backend actions for sending and verifying OTP.&#10;&#10;## Important Imports&#10;- `AlertDialog`, `InputOTP`, `Button`: UI components for modal and OTP input.&#10;- `Image`: Displays icons in the modal.&#10;&#10;## Props&#10;- `accountId`: The user's account ID for verification.&#10;- `email`: The user's email address for OTP delivery.&#10;&#10;## Usage&#10;Used in authentication flows to verify user identity via OTP before granting access." />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/components/Search.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/components/Search.md" />
-              <option name="updatedContent" value="# Search.tsx&#10;&#10;## Purpose&#10;Provides a search bar for files, displaying results as the user types and allowing navigation to file details.&#10;&#10;## Hooks Used&#10;- **useState**: Manages search query, results, and dropdown open state.&#10;- **useEffect**: Fetches files when the debounced query changes and resets query on search param change.&#10;- **useDebounce**: Debounces the search query to reduce API calls.&#10;- **useRouter**: Navigates to file details or filtered views.&#10;- **usePathname**: Gets the current route for search context.&#10;- **useSearchParams**: Reads query parameters from the URL.&#10;&#10;## Functions&#10;- **fetchFiles**: Fetches files matching the search query.&#10;- **handleClickItem**: Handles navigation when a search result is clicked.&#10;&#10;## Important Imports&#10;- `Input`: UI component for search input.&#10;- `Thumbnail`, `FormattedDateTime`: Components for displaying file results.&#10;- `getFiles`: Backend action to fetch files.&#10;&#10;## Usage&#10;Used in the header to allow users to search for files and quickly access results." />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/components/Sidebar.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/components/Sidebar.md" />
-              <option name="updatedContent" value="# Sidebar.tsx&#10;&#10;## Purpose&#10;Renders the sidebar navigation for authenticated users, displaying navigation links and user info.&#10;&#10;## Hooks Used&#10;- **usePathname**: Gets the current route to highlight the active navigation item.&#10;&#10;## Functions&#10;- **Sidebar (component)**: Accepts user props and renders navigation links and user info.&#10;&#10;## Important Imports&#10;- `Link`: For navigation between pages.&#10;- `Image`: Displays logos and user avatar.&#10;- `navItems`: List of navigation items.&#10;- `avatarPlaceholderUrl`: Default avatar image if none is provided.&#10;- `cn`: Utility for conditional class names.&#10;&#10;## Props&#10;- `fullName`: User's full name.&#10;- `avatar`: User's avatar URL.&#10;- `email`: User's email address.&#10;&#10;## Usage&#10;Used in the main layout to provide navigation and user info for authenticated users." />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/components/Sort.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/components/Sort.md" />
-              <option name="updatedContent" value="# Sort.tsx&#10;&#10;## Purpose&#10;Provides a dropdown for sorting files by different criteria (e.g., date, name, size).&#10;&#10;## Hooks Used&#10;- **useRouter**: Navigates to the sorted view when a sort option is selected.&#10;- **usePathname**: Gets the current route for sorting context.&#10;&#10;## Functions&#10;- **handleSort**: Handles sort option changes and updates the route with the selected sort parameter.&#10;&#10;## Important Imports&#10;- `Select`, `SelectContent`, `SelectItem`, `SelectTrigger`, `SelectValue`: UI components for the dropdown menu.&#10;- `sortTypes`: List of available sort options.&#10;&#10;## Usage&#10;Used in file listing pages to allow users to sort files by different criteria." />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/components/Thumbnail.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/components/Thumbnail.md" />
-              <option name="originalContent" value="&#10;" />
-              <option name="updatedContent" value="# Thumbnail.tsx&#10;&#10;## Purpose&#10;Displays a thumbnail image for a file. If the file is an image (except SVG), it shows the actual image; otherwise, it displays an icon representing the file type and extension.&#10;&#10;## Hooks Used&#10;- **None**: This component is stateless and does not use any React hooks.&#10;&#10;## Functions&#10;- **Thumbnail (component)**: Accepts `type`, `extension`, `url`, `imageClassName`, and `className` as props. Determines if the file is an image and renders the appropriate thumbnail or icon.&#10;&#10;## Important Imports&#10;- `Image` from `next/image`: For optimized image rendering.&#10;- `cn` from `@/lib/utils`: Utility for conditional class names.&#10;- `getFileIcon` from `@/lib/utils`: Returns the correct icon for a file type/extension.&#10;&#10;## Props&#10;- `type`: File type (e.g., image, document).&#10;- `extension`: File extension (e.g., jpg, pdf).&#10;- `url`: Optional URL for the file/image.&#10;- `imageClassName`, `className`: Optional CSS classes for styling.&#10;&#10;## Usage&#10;Used in file listing and card components to visually represent files in the UI." />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/lib/actions/file.action.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/lib/actions/file.action.md" />
-              <option name="updatedContent" value="# file.action.ts&#10;&#10;## Purpose&#10;Handles all file-related backend actions, including uploading, deleting, renaming, sharing, and fetching files from the database and storage.&#10;&#10;## Hooks Used&#10;- **None**: This file only contains server-side functions.&#10;&#10;## Functions&#10;- **uploadFile**: Uploads a file to Appwrite storage and creates a database document with metadata.&#10;- **deleteFile**: Deletes a file from storage and removes its document from the database.&#10;- **renameFile**: Renames a file and updates its document in the database.&#10;- **updateFileUsers**: Updates the list of users who have access to a file.&#10;- **getFiles**: Fetches files from the database based on type, search query, and sort order.&#10;- **handelError**: Handles and logs errors for file actions.&#10;&#10;## Important Imports&#10;- `createAdminClient`: Initializes Appwrite client for server actions.&#10;- `appWriteConfig`: Configuration for Appwrite endpoints and IDs.&#10;- `InputFile`, `ID`, `Models`, `Query`: Appwrite SDK utilities.&#10;- `constructFileUrl`, `getFileType`, `parseStringify`: Utility functions for file handling.&#10;- `revalidatePath`: Revalidates Next.js cache after file changes.&#10;&#10;## Usage&#10;Used by frontend components and pages to perform file operations such as upload, delete, rename, share, and fetch files." />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/lib/actions/user.actions.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/lib/actions/user.actions.md" />
-              <option name="updatedContent" value="# user.actions.ts&#10;&#10;## Purpose&#10;Handles all user-related backend actions, including user registration, authentication, OTP verification, and user data retrieval.&#10;&#10;## Hooks Used&#10;- **None**: This file only contains server-side functions.&#10;&#10;## Functions&#10;- **getUserByEmail**: Fetches a user document from the database by email.&#10;- **sendEmailOTP**: Sends an OTP to the user's email for authentication.&#10;- **verifySecret**: Verifies the OTP and creates a session for the user.&#10;- **createAccount**: Registers a new user in the database and Appwrite.&#10;- **signInUser**: Authenticates a user and creates a session.&#10;- **getCurrentUser**: Retrieves the currently authenticated user from cookies/session.&#10;- **handelError**: Handles and logs errors for user actions.&#10;&#10;## Important Imports&#10;- `createAdminClient`, `createSessionClient`: Initializes Appwrite clients for server actions.&#10;- `appWriteConfig`: Configuration for Appwrite endpoints and IDs.&#10;- `Query`, `ID`: Appwrite SDK utilities.&#10;- `parseStringify`: Utility for object parsing/stringifying.&#10;- `cookies`: Next.js cookies API for session management.&#10;- `avatarPlaceholderUrl`: Default avatar image if none is provided.&#10;- `redirect`: Next.js redirect utility.&#10;&#10;## Usage&#10;Used by authentication components and pages to perform user registration, login, OTP verification, and user data retrieval." />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/lib/appwrite/config.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/lib/appwrite/config.md" />
-              <option name="updatedContent" value="# config.ts&#10;&#10;## Purpose&#10;Defines configuration constants for connecting to the Appwrite backend, including endpoint URLs, project IDs, database IDs, collection IDs, bucket IDs, and secret keys.&#10;&#10;## Hooks Used&#10;- **None**: This file only contains configuration constants.&#10;&#10;## Functions&#10;- **None**: Only exports the `appWriteConfig` object.&#10;&#10;## Important Imports&#10;- **None**: All values are sourced from environment variables.&#10;&#10;## Usage&#10;Used throughout the backend and server actions to configure Appwrite clients and access resources." />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/lib/appwrite/index.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/lib/appwrite/index.md" />
-              <option name="updatedContent" value="# index.ts&#10;&#10;## Purpose&#10;Initializes and exports Appwrite client instances and helper functions for interacting with Appwrite services (database, storage, account, etc.).&#10;&#10;## Hooks Used&#10;- **None**: This file only contains stateless helper functions and client initializations.&#10;&#10;## Functions&#10;- **createAdminClient**: Initializes an Appwrite client with admin privileges for server-side actions.&#10;- **createSessionClient**: Initializes an Appwrite client for session-based user actions.&#10;&#10;## Important Imports&#10;- `appWriteConfig`: Configuration constants for Appwrite endpoints and IDs.&#10;- `Client`, `Databases`, `Storage`, `Account`: Appwrite SDK classes for service access.&#10;&#10;## Usage&#10;Used by backend actions and server functions to interact with Appwrite services for file and user management." />
-            </PendingDiffInfo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/lib/utils.md">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/lib/utils.md" />
-              <option name="updatedContent" value="# utils.ts&#10;&#10;## Purpose&#10;Provides utility functions for class name merging, file size conversion, file type detection, percentage calculation, and object parsing/stringifying.&#10;&#10;## Hooks Used&#10;- **None**: This file only contains stateless utility functions.&#10;&#10;## Functions&#10;- **cn**: Merges Tailwind and custom class names using `clsx` and `twMerge`.&#10;- **parseStringify**: Safely parses and stringifies unknown values.&#10;- **convertFileToUrl**: Converts a File object to a URL for preview.&#10;- **convertFileSize**: Converts file size in bytes to a human-readable string (Bytes, KB, MB, GB).&#10;- **calculatePercentage**: Calculates the percentage of a file size relative to a 2GB limit.&#10;- **getFileType**: Determines the file type and extension from a filename.&#10;&#10;## Important Imports&#10;- `clsx`, `twMerge`: Used for class name merging.&#10;&#10;## Usage&#10;Used throughout the app for file handling, formatting, and UI class management." />
             </PendingDiffInfo>
           </value>
         </entry>

@@ -1,4 +1,4 @@
-"use server"; // prevent key exposer to client
+"use server"; // prevent key exposer to a client
 
 //
 import { createAdminClient, createSessionClient } from "@/lib/appwrite";
